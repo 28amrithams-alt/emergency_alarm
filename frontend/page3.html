@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gesture Control Dashboard</title>
+  <link rel="stylesheet" href="page3.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo">Gesture Control Dashboard</h1>
+    <button id="settingsBtn" class="settings-btn">⚙️</button>
+  </header>
+
+  <main>
+    <!-- Camera Section -->
+    <section class="camera-section">
+      <div class="camera-container">
+        <video id="cameraFeed" autoplay playsinline></video>
+      </div>
+      <div class="gesture-label">🖐 Scroll</div>
+    </section>
+
+    <!-- Right Panel -->
+    <aside class="status-panel">
+      <h2>System Status</h2>
+      <p>Tracking: <span class="status active">Active</span></p>
+      <p>Camera: <span id="cameraStatus" class="status disconnected">Disconnected</span></p>
+      <p>Confidence: <span class="confidence">80%</span></p>
+
+      <div class="gallery-box" id="galleryBtn">
+        Feedback/Report
+      </div>
+    </aside>
+
+    <!-- Gesture Log -->
+    <section class="gesture-log">
+      <h2>Gesture Log</h2>
+      <div class="log-list">
+        <p>✊fist — emergency</p>
+        <p>✋palm — moderate</p>
+        <p>👍thumbs up — normal</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Settings Menu -->
+  <div id="settingsMenu" class="settings-menu hidden">
+    <h3>Settings</h3>
+    <ul>
+      <li><button data-action="sender">info gestures</button></li>
+      <li><button data-action="receiver">edit gestures</button></li>
+      <li><button data-action="tutorial">Tutorial Video </button></li>
+      <li><button data-action="signout">Sign Out </button></li>
+    </ul>
+  </div>
+
+  <script src="page3.js"></script>
+</body>
+</html>

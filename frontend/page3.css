@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #030b1b, #000);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 0 15px cyan, 0 0 25px magenta;
+}
+
+.settings-btn {
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 6px cyan);
+}
+
+.settings-btn:hover {
+  transform: rotate(90deg);
+  color: #00ffd0;
+}
+
+/* MAIN LAYOUT */
+main {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+/* CAMERA SECTION */
+.camera-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+
+#cameraFeed {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.gesture-label {
+  margin-top: 15px;
+  background: linear-gradient(90deg, #00ffff55, #ff00ff55);
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-shadow: 0 0 10px cyan;
+}
+
+/* STATUS PANEL */
+.status-panel {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.25);
+  width: 250px;
+}
+
+.status-panel h2 {
+  color: #00ffd0;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.status {
+  font-weight: 600;
+}
+
+.active {
+  color: #00ffcc;
+}
+
+.disconnected {
+  color: #ff8080;
+}
+
+.connected {
+  color: #00ccff;
+}
+
+.confidence {
+  color: #ff80ff;
+}
+
+/* GALLERY BOX */
+.gallery-box {
+  margin-top: 25px;
+  padding: 12px;
+  background: linear-gradient(90deg, #00ffff33, #ff00ff33);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.gallery-box:hover {
+  background: linear-gradient(90deg, #00ffff77, #ff00ff77);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.4);
+}
+
+/* GESTURE LOG */
+.gesture-log {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+}
+
+.gesture-log h2 {
+  color: #ff80ff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.log-list {
+  max-height: 250px;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  color: #c8e6ff;
+}
+
+.log-list p {
+  margin: 8px 0;
+}
+
+/* SETTINGS MENU */
+.settings-menu {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  background: rgba(20, 20, 20, 0.9);
+  color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 230px;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.settings-menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.settings-menu h3 {
+  text-align: center;
+  color: #00ffd0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.settings-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settings-menu li {
+  margin-bottom: 12px;
+}
+
+.settings-menu li button {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.settings-menu li button:hover {
+  background: linear-gradient(90deg, #00ffd0, #ff00ff);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ffff, #ff00ff);
+  border-radius: 4px;
+}
